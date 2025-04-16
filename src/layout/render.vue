@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { h, onUpdated, provide, ref, type Component } from "vue";
+import { h, provide, ref, type Component } from "vue";
 import Shape from './Shape/index.vue';
 
 provide('controller', {
@@ -33,10 +33,6 @@ const components: Record<string, Component> = {
     }
   }
 }
-
-onUpdated(() => {
-  console.log('我被更新了吗')
-})
 
 const render = ref({
   name: 'div',

@@ -2,8 +2,7 @@
   <div class="shape">
     <slot name="default"></slot>
 
-    <div v-for="point in points" :key="point.id" class="w-2 h-2 absolute bg-red-500" :style="point.getStyle()"
-      @click="onclick">
+    <div v-for="point in points" :key="point.id" class="absolute" :style="point.getStyle()" @click="onclick">
     </div>
   </div>
 
@@ -12,7 +11,6 @@
 <script setup lang="ts">
 
 import { points } from "./index";
-
 
 
 const onclick = (e: MouseEvent) => {

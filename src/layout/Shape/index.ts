@@ -1,4 +1,5 @@
 import { generateId } from '@/shared'
+import { transferObjectToString } from '@/shared'
 
 enum PointEnum {
   lt = 'lt',
@@ -24,8 +25,19 @@ class Point {
 
   getStyle() {
     const [x, y] = this.vector
-    return `top: ${y * 100}%; left: ${x * 100}%;transform: translate(-50%, -50%);`
+    const style = {
+      width: '10px',
+      height: '10px',
+      backgroundColor: 'red',
+      borderRadius: '50%',
+      top: `${y * 100}%`,
+      left: `${x * 100}%`,
+      transform: 'translate(-50%, -50%)',
+    }
+    return transferObjectToString(style)
   }
+
+  move() {}
 }
 
 export const points: Point[] = getPoints()
