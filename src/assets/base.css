@@ -36,7 +36,7 @@
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -48,7 +48,7 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
-}
+} */
 
 *,
 *::before,
@@ -83,4 +83,24 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.iconify-large {
+  width: 40px;
+  height: 40px;
+}
+
+.iconify-medium {
+  width: 30px;
+  height: 30px;
+}
+
+.iconify-default {
+  width: 20px;
+  height: 20px;
+}
+
+.iconify-small {
+  width: 10px;
+  height: 10px;
 }
